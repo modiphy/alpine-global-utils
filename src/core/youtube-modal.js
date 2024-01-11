@@ -11,7 +11,17 @@ export default class YoutubeModal {
 
   addHtml() {
     const modal = document.createElement('div')
-    modal.classList.add('youtube-modal')
+
+    const parentClasses = [
+      'fixed',
+      'inset-0',
+      'overflow-x-hidden',
+      'overflow-y-auto',
+      'transition',
+      'z-1000',
+    ]
+
+    modal.classList.add(...parentClasses)
     modal.setAttribute('x-cloak', '')
     modal.setAttribute('x-show', 'youtubeModalVideoId')
     modal.setAttribute('x-transition:enter', 'ease-out duration-300')
@@ -26,7 +36,7 @@ export default class YoutubeModal {
             class="fixed inset-0 transition-opacity"
             aria-hidden="true"
         >
-            <div class="absolute inset-0 bg-gray-800 opacity-85"></div>
+            <div class="absolute inset-0 bg-gray-900 opacity-90 backdrop-blur-lg"></div>
         </div>
         <div class="absolute top-0 right-0 hidden pt-4 pr-4 sm:block">
             <button
