@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/gh/modiphy/alpine-utils@latest/dist/app.css" rel="stylesheet">
+   <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+</head>
+<body x-data="globalUtils()">
+
+<a @click="youtubeModalVideoId = 'v9cvzW0m_ZU'">click view youtube video</a>
+
+<script src="https://cdn.jsdelivr.net/gh/modiphy/alpine-utils@latest/dist/app.js" defer ></script>
+
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('globalUtils', () => ({
+    youtubeModalVideoId: '',
+  }))
+})
+</script>
+
+
+</body>
+</html>

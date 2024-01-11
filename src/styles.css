@@ -1,0 +1,190 @@
+.youtube-modal {
+  position: fixed;
+  z-index: 999999;
+  inset: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.youtube-modal-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  text-align: center;
+}
+
+.youtube-modal-bg {
+  position: fixed;
+  inset: 0;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.youtube-modal-bg-cover {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.youtube-modal-button-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  padding: 1rem;
+}
+
+.youtube-modal-button {
+  color: #fff;
+  border-radius: 0;
+  cursor: pointer;
+  appearance: button;
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+  font-feature-settings: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  font-variation-settings: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  border: none;
+}
+
+.youtube-modal-button:hover {
+  color: #76e9e8;
+}
+
+.youtube-modal-button:focus {
+  outline: none;
+}
+
+.youtube-modal-button-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.youtube-modal-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  max-width: 1024px;
+  transition: all 0.3s ease-out;
+}
+
+.youtube-modal-iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.youtube-modal-iframe-container>* {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.youtube-modal-iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (min-width: 640px) {
+  .youtube-modal-button-container {
+    display: block;
+  }
+
+  .youtube-modal-container {
+    max-width: 640px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .youtube-modal-container {
+    max-width: 768px;
+  }
+
+  .youtube-modal-button-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .youtube-modal-container {
+    max-width: 1024px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .youtube-modal-container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .youtube-modal-container {
+    max-width: 1536px;
+  }
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
