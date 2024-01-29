@@ -4,6 +4,9 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   prefix: 'tw-',
+  corePlugins: {
+    preflight: false,
+  },
   content: ['./src/**/*.js'],
   theme: {
     fontFamily: {
